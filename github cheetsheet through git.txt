@@ -8,3 +8,12 @@ git add .
 git commit -m "koi bhi message relatable"
 
 last 3 lines copy from ur github repo 
+
+
+
+
+if you push your code in the existing repo so follow :
+
+git add . 
+git commit -m "message"
+git push
