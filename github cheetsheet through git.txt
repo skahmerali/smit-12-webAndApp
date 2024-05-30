@@ -1,0 +1,10 @@
+One Time Code :
+git config --global user.name "apna github name"
+git config --global user.email "apna github wala email"
+
+everytime follow this instruction:
+git init 
+git add .
+git commit -m "koi bhi message relatable"
+
+last 3 lines copy from ur github repo 
