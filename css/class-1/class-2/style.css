@@ -1,0 +1,17 @@
+p {
+    /* color: rgb(200, 155, 150); */
+    /* color: #668595; */
+    /* color: lightsalmon; */
+    color: rgba(0, 4, 1, 0.649);
+    /* background-color: blue; */
+    /* background-color: rgb(0, 150, 255); */
+    /* background-color: hsl(0, 50%, 60%); */
+    /* opacity: 0.2; */
+    /* this is for grediant colors */
+    /* https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-image&preval=linear-gradient(red,%20yellow,%20blue) */
+    /* background-image: linear-gradient(rgb(239, 88, 88), yellow, blue);; */
+    font-family: serif;
+    font-weight: lighter;
+    font-stretch: condensed;
+    font-style: oblique;
+}
