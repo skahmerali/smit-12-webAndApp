@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Playwrite ES Deco", cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap');
+}
+
+h1 {
+    text-align: justify;
+    font-family: "Playwrite ES Deco", cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap');
+    text-shadow: 10px 10px 5px rgb(248, 26, 26);
+}
+
+h1:first-letter {
+    color: red;
+    font-size: 40px;
+}
+
+a:visited {
+    color: red;
+    font-size: 10px;
+}
+
+a:link {
+    color: aqua
+}
+
+
+input {
+    padding: 6px 12px 6px 12px;
+    border: 1px solid #00ff51;
+    border-top: 2px solid;
+    color: yellowgreen;
+}
+
+input.submit:hover {
+    background-color: #3a65ff;
+    border-radius: 20px;
+    transition: 1s;
+    border-color: aqua;
+}
+
+input.submit:active {
+    background-color: rgb(249, 20, 20);
+}
+
+input.text {
+    color: #cccccc;
+}
+
+input.text:focus {
+    background-color: #fcfc0e;
+
+}
