@@ -1,0 +1,48 @@
+/* p[class="pakistan"]{
+    width: 300px;
+    background-color: black;
+    color: antiquewhite;
+} */
+/* body{
+    max-width: 857px;
+    min-width: 456px; 
+ } */
+div {
+    width: 100%;
+    border: 1px solid red;
+}
+
+/* img{
+    width: 100px;
+} */
+.box {
+    width: 40%;
+    display: inline-block;
+    margin: 0% auto;
+    border: 1px solid rgb(0, 255, 21);
+    height: 100px;
+    overflow: scroll;
+    padding: 20px;
+    margin: 20px 5px 5px 10px;
+    /* border-width: thick; */
+    /* border-width: thin; */
+    border-width: 5px;
+    /* border-style: groove  ; */
+    border-top-style: double;
+    border-left-style: inset;
+    border-right-style: outset;
+    border-bottom-style: dotted;    
+}
+
+button {
+    width: 80px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    /* padding-right: 20px; */
+
+}
+
+/* body{
+
+ } */
