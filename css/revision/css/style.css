@@ -1,0 +1,48 @@
+/* .main{
+    background-color: magenta;
+    color: bisque;
+    font-size: 100px;
+} */
+/* 
+*{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+} */
+
+
+/* body{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+} */
+
+.main>div{
+    background-color: rgb(85, 94, 3);
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+}
+
+.white{
+    background-color: white;
+    color: blue;
+}
+
+.black{
+    background-color: black;
+    color: white;
+}
+
+.navbar{
+    list-style: none;
+    display: inline-block;
+    background-color: black;
+    width: 100%;
+    text-align: right;
+}
+.item{
+    color: brown;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 50px;
+}
