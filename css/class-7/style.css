@@ -1,0 +1,30 @@
+body {
+  /* position: static;   */
+  /* width: 750px; */
+  font-family: Arial, Verdana, sans-serif;
+  color: #665544;
+}
+h1 {
+  background-color: #efefef;
+  padding: 10px;
+}
+/* p {
+  width: 450px;
+} */
+/* p.example {
+  width: 300px;
+  display: inline-block;
+  position: relative;
+  bottom: 20px;
+  top: 10px;
+  left: 100px;
+} */
+h1 {
+  position: absolute;
+  top: 0px;
+  left: 500px;
+  width: 250px;
+}
+p {
+  width: 450px;
+}

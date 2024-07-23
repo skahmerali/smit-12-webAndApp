@@ -1,0 +1,17 @@
+/* .circle-list { */
+    /* list-style-type: none; */
+    /* list-style-type: upper-roman; */
+    /* list-style-image: url(https://freepngimg.com/thumb/star/1-red-star-png-image-thumb.png);
+} */
+/* li {
+    margin: 200px;
+}
+#special{
+    list-style-position: inside;
+
+} */
+
+.circle-list{
+    list-style:inside url(https://freepngimg.com/thumb/star/1-red-star-png-image-thumb.png) ;
+    width: 10px;
+}
