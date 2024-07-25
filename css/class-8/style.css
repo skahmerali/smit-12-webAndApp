@@ -1,0 +1,47 @@
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: blueviolet;
+  margin: auto;
+}
+.row {
+  margin: 0% auto;
+  width: 440px;
+}
+.box {
+  width: 80px;
+  height: 100px;
+  margin: 2px;
+  background-color: rgb(222, 243, 36);
+  display: inline-block;
+}
+
+@media (max-width: 768px) and (min-width: 601px) {
+  .row {
+    width: 300px;
+  }
+  .box {
+    width: 300px;
+    height: 50px;
+    margin: 2px;
+    background-color: rgb(24, 243, 89);
+    display: inline-block;
+  }
+}
+
+@media (max-width: 600px) {
+    .row{
+        width: 100px;
+    }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    background-color: rgb(243, 36, 36);
+    display: block;
+  }
+  .container {
+    height: auto;
+  }
+}

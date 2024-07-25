@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 1000px
+
+}
+.cover{
+    background-image: url(./ggg.jpg);
+    width: 100%;
+    height: 1000px;
+}
