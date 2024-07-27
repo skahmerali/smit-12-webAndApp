@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  
+}
+.header div{
+    background-color: aquamarine;
+    width: 100px;
+    margin: 10px;
+
+}
+@media (max-width: 480px){
+    .header{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+}
