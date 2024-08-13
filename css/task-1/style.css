@@ -1,0 +1,78 @@
+.header {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(80, 79, 79);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.right {
+  display: flex;
+  list-style: none;
+  color: white;
+  gap: 20px;
+}
+.content {
+  width: 300px;
+  margin: auto;
+}
+.content-heading {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+.content-title {
+  text-align: center;
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(254, 94, 14, 1) 2%,
+    rgba(222, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.btn {
+  width: 150px;
+  height: 30px;
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(254, 94, 14, 1) 2%,
+    rgba(222, 0, 255, 1) 100%
+  );
+  border-radius: 30%;
+  color: white;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+
+}
+.right-btn{
+    width: 30px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+}
+.cover-bottom{
+    display:flex;
+    justify-content: space-between;
+    color: white;
+}
+.careers{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    color: white;
+    background-color: rgb(165, 165, 165);
+}
+.left{
+    width: 50%;
+}
+.line{
+    width: 50px;
+}
