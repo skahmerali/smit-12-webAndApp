@@ -1,0 +1,37 @@
+/* The animation code */
+/* @keyframes ahmer {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
+    }
+} */
+@keyframes animation {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: green;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: yellow;
+    }
+
+}
+
+.animate-bg {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+}
+
+/* .animate-bg:hover {
+    animation-name: animation;
+    animation-duration: 5s;
+} */
