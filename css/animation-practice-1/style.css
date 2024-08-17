@@ -1,0 +1,27 @@
+@keyframes spin {
+    to {
+        transform: rotateY(1turn);
+    }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    div {
+        animation: spin linear;
+        animation-timeline: view();
+        animation-range: contain;
+    }
+}
+
+@layer demo.support {
+    body {
+        /* give us something to scroll */
+        min-block-size: 300dvh;
+    }
+
+    body,
+    div {
+        display: grid;
+        place-content: center;
+    }
+}
