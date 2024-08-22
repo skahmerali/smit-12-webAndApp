@@ -123,6 +123,7 @@ button{
     text-align: center;
     font-weight: 300;
     font-family: 'Times New Roman', Times, serif;
+    
 }
 @media  (max-width: 769px) {
     .header{
