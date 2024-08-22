@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  height: auto;
+}
+/* header section */
+
+
+.header {
+  display: flex;
+  background-color: rgb(48, 48, 48);
+  color: white;
+  box-shadow: 10px 20px 2px 5px rgb(255, 255, 255);
+}
+.logo {
+  width: 50%;
+}
+.logo img {
+  width: 100px;
+}
+.navbar {
+  width: 50%;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+.navbar ul li{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+    font-size: large;
+}
+.navbar ul li:hover {
+    /* width: 100px; */
+    background-color: rgba(194, 194, 18, 0.657);
+    height: 100px;
+    align-items: center;
+    /* text-shadow: 0px 10px 5px rgb(180, 180, 180); */
+}
+
+.navbar-mobile{
+    display: none;
+}
+/* end header section  */
+.hero-section{
+    width: 100%;
+}
+.hero-section img{
+    width: 100%;
+    /* display: block;
+    margin:0% auto; */
+}
+/* items section start */
+
+.items{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+.items .item{
+    flex-basis: 20%;
+    /* width: 200px; */
+    background-color: rgba(0, 0, 0, 0.629);
+    border-radius: 10px;
+    border: 1px solid gainsboro ;
+    color: white;
+    font-size: medium;
+    text-align: center;
+}
+.item:hover{
+    background-color: aliceblue;
+    color: black;
+    transition: 0.5s;
+    width: 250px;
+}
+.items .item img{
+    width: 100%;
+    border-radius: 10px;
+}
+h3{
+    padding: 20px;
+}
+button{
+    /* width: 50%; */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(223, 21, 21, 0.643);
+    color: white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+}
+
+/* footer */
+.footer{
+    background-color: rgb(48, 48, 48);
+    color: white;
+    box-shadow: 10px 20px 2px 5px rgb(255, 255, 255);
+}
+.footer .footer-item{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+.footer .footer-item ul li {
+    list-style: none;
+    margin-top: 10px;
+}
+.copy-writes{
+    background-color: whitesmoke;
+    color: rgb(25, 0, 255);
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+}
+@media  (max-width: 769px) {
+    .header{
+        display: none;
+    }
+    .navbar-mobile {
+        display: block;
+        width: 100%;
+        background-color: rgb(48, 48, 48);
+        color: white;
+        box-shadow: 10px 20px 2px 5px rgb(255, 255, 255);
+    }
+}
