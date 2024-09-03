@@ -24,3 +24,4 @@ console.log(((((numb1++ + num2++) - --numb1) + ++num2) - --numb1));
 console.log(num2)
 // 1 + 2 - 1 + 4 - 0 = 6
 //           1+ 2 - 1 +     - 0
+
