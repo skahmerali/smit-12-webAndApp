@@ -29,9 +29,16 @@ function insertValue() {
   var studentsRollNumValue = document.getElementById("studetsRollNum").value;
 
   studensNameArrays.push(studentsNameValue);
-  studensRolNumberArrays.push(studentsRollNumValue);
+  studensRolNumberArrays.unshift(studentsRollNumValue);
+  // var storeNameData = document.getElementById('result-name').innerHTML;
 
-  console.log(studensNameArrays);
-  console.log(studensRolNumberArrays);
+  document.getElementById("result-name").innerHTML = studensNameArrays;
+  document.getElementById("result-rollNumber").innerHTML =
+    studensRolNumberArrays;
+
+  console.log(studensNameArrays.length);
+  // console.log(studensNameArrays);
+  // console.log(studensRolNumberArrays);
+  // return false;
 }
 // insertValue();
