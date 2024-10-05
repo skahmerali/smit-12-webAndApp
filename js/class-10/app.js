@@ -31,9 +31,9 @@ function search() {
   var searchInput = document.getElementById("searchInput").value;
   console.log(searchInput);
   for (var i = 0; i < text.length; i++) {
-    if (text.slice(i, i + 12) === 'adipisicingk') {
+    if (text.slice(i, i + 12) === "adipisicingk") {
+      console.log(i);
       console.log("hello world");
-   
     }
   }
 }
