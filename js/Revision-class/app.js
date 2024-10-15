@@ -53,7 +53,7 @@ for (var i = 0; i <= arrays.length; i++) {
   console.log(arrays[i]);
 
   if (arrays[i] === undefined) {
-    arrays.splice(arrays[i], 0, "hello world");
+    arrays.splice(i, 0, "hello world");
     console.log(arrays[i])
     break;
   }
