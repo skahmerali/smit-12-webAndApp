@@ -1,16 +1,17 @@
-// var pomptUser = prompt("Enter your desire day");
+var pomptUser = prompt("Enter your desire day");
 
-// pomptUser = pomptUser.toLowerCase();
-// switch (pomptUser) {
-//   case "sat":
-//     alert("This is Saturday");
-//     break;
-//   case "sun":
-//     alert("This is Sunday");
-//     break;
-//   default:
-//     alert("invalid day");
-// }
+pomptUser = pomptUser.toLowerCase();
+
+switch (pomptUser) {
+  case "sat":
+    alert("This is Saturday");
+    break;
+  case "sun":
+    alert("This is Sunday");
+    break;
+  default:
+    alert("invalid day");
+}
 
 // var result = (pomptUser - 100) * 10 + 1000;
 // console.log(pomptUser);
