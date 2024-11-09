@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <p>Hello</p>
+        <p>World</p>
+        <p>Saylani</p>
+        <p>Welcome</p>
+    </div>
+    <div id="parent1">
+        <p>Hello</p>
+        <p>World</p>
+        <p>Saylani</p>
+        <p>Welcome</p>
+    </div>
+    <div id="parent2">
+        <p>Hello</p>
+        <p>World</p>
+        <p>Saylani</p>
+        <p>Welcome</p>
+    </div>
+
+    <script>
+        // var parent = document.getElementById("parent");
+        // var parent = document.getElementsByTagName("p");
+        // parent[2].innerText = "hello world";
+        // console.log(parent[2].innerText);
+
+        // var element = document.childNodes[1].childNodes[2].childNodes[1];
+        // console.log(element);
+        var element = document.childNodes[1].childNodes[2].childNodes[5].childNodes[1].lastChild;
+        console.log(element);
+    </script>
+</body>
+</html>
