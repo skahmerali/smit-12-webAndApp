@@ -31,4 +31,10 @@ var parentElement = document.getElementById("parent");
 // attributeName = parentElement.getAttribute("class");
 // console.log(attributeName);
 console.log(parentElement);
-parentElement = parentElement.createElement("span");
+var spanElement= document.createElement("span");
+var newTxt = document.createTextNode("Hello!");
+spanElement.appendChild(newTxt)
+console.log(spanElement);
+
+parentElement.appendChild(spanElement);
+console.log(parentElement);
