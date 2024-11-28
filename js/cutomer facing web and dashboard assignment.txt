@@ -1,0 +1,9 @@
+Task Dashboard & Ecommere cousomer facing website
+
+1) signup 
+2) login 
+3) Admin Dashboard ( email : admin@gmail.com , password: Admin111)
+4) customer facing website (Add to cart , checkout )
+
+Note : All data which saved by any user it should be save on local storage , 
+the data which load in the customer facing website like items and others should also render from local storage 

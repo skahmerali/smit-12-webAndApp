@@ -1,5 +1,7 @@
 var onlineStore = [
     {
+        email: "",
+        password: "",
         name: "TechWorld Online Store",
         location: "New York, NY",
         categories: [
@@ -54,7 +56,6 @@ var onlineStore = [
 
                     }
                 ]
-
 
             }
         ]
@@ -188,4 +189,25 @@ for (var i = 0; i < onlineStore.length; i++) {
     for (var j = 0; j < storeDetails.length; j++) {
         // console.log(storeDetails[j].orders)
     }
+}
+
+var waqasCollection = [{
+    userInfo: {},
+
+}]
+
+function loginHtml (){
+
+}
+function abc(user) {
+    alert("helo world" + user);
+
+}
+var div = document.getElementById("div");
+
+function clickme() {
+    // var userName = prompt("Enter user name !")
+    abc("userName");
+    // window.location.href = './home.html';
+    console.log(div);
 }

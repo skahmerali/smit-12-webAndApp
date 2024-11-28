@@ -1,0 +1,51 @@
+Objective:
+The goal of this assignment is to create a complex data structure for an online store. You will design a system that manages products, customers, orders, and categories. This assignment will test your understanding of arrays, objects, and how they can be nested inside each other.
+
+Instructions:
+Define an Online Store Object: Create a JavaScript object that represents an online store. This object should contain several key pieces of information:
+
+The store’s name (e.g., "TechWorld Online Store").
+The store’s location (e.g., "New York, NY").
+A list of categories available in the store (e.g., "Laptops", "Smartphones", "Accessories").
+A list of products available in the store, where each product has:
+id: A unique identifier for the product.
+name: The name of the product (e.g., "MacBook Pro").
+category: The category this product belongs to (e.g., "Laptops").
+price: The price of the product.
+stock: The number of units available.
+Details: An object with additional information about the product (e.g., brand, model, color, screen size).
+Customer Information: The store should also maintain information about its customers. Each customer object should have:
+
+id: A unique identifier for the customer.
+firstName: The customer's first name.
+lastName: The customer's last name.
+email: The customer's email address.
+phoneNumber: The customer's phone number.
+Address: An object that contains the customer's address, including street, city, state, and zip code.
+Orders: An array of orders made by the customer. Each order object should include:
+orderId: A unique identifier for the order.
+date: The date the order was placed.
+status: The current status of the order (e.g., "Shipped", "Delivered", "Processing").
+totalAmount: The total cost of the order.
+Products: An array of products in the order, where each product has:
+productId: The ID of the product being ordered.
+quantity: The number of units ordered.
+price: The price of the product at the time of the order.
+Example Data: Based on the structure described above, create example data for the following:
+
+At least 3 products in the store (you can choose any products like laptops, phones, or accessories).
+At least 2 categories (such as "Laptops" and "Smartphones").
+At least 2 customers, each with at least 2 orders.
+Tasks: Once you have created your object structure, you will need to:
+
+Task 1: Calculate the Total Value of an Order Write a description (not code) for how to calculate the total value of a customer's order by summing the price of each product multiplied by its quantity.
+
+Task 2: Update Product Stock Describe how the stock of a product should be updated when an order is placed. For example, if a customer buys 2 units of a product, the stock should decrease by 2.
+
+Task 3: Get All Products in a Category Describe how to retrieve all products that belong to a specific category (e.g., "Laptops"). What information do you need to filter through?
+
+Task 4: Get All Orders for a Customer Write a description of how to retrieve all orders placed by a particular customer. Include how to show the products in each order, along with the quantity and total price.
+
+Deliverables:
+A detailed data structure (JavaScript object) that represents the store, categories, products, and customers.
+Short descriptions or pseudocode of how to solve the tasks listed above (e.g., calculations, updating stock, filtering categories, etc.).
