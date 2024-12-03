@@ -1,0 +1,7 @@
+Node download
+npm i create-react-app -g
+npx create-react-app my-app(koi bhi name)
+open terminal in cmd 
+npm i
+npm start
+
