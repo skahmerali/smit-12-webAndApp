@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // const gettingData = async () => {
+        //     try {
+        //         console.log("hello world");
+        //         if (!name){
+        //             const errLogic = "name is missing";
+        //             return errLogic;
+        //         }
+        //         // const res = await ;
+        //         // if(res.status === 200){
+
+        //         // }
+        //         console.log(name);
+        //         console.log("hello!")
+        //     }
+        //     catch (err) {
+        //         console.log(err, 'err');
+        //     }
+        // }
+
+        async function singup() {
+            try {
+                email = "ahmer@gmail.com";
+                pass = "12345";
+                // if (email) {
+                //     if (pass) {
+                //         if (pass.length > 10) {
+                //             alert("user is good to sgnup")
+                //         }
+                //     }
+                // }
+                if (!email) {
+                    throw "invalid user"
+                }   
+                if(!pass){
+                     return "invalid user"
+                }
+
+                if(pass.length < 10){
+                    return "invalid user"
+                }
+            }
+            catch (err) {
+
+            }
+        }
+    </script>
+</body>
+
+</html>
