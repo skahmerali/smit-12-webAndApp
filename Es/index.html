@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // var arr = [
+        //     "Banana",
+        //     "Orange",
+        //     "Apple",
+        //     "Mango"
+        // ];
+        // var [a, b] = arr;
+        // console.log(a);
+        // console.log(b);
+
+        // const q1 = ["Jan", "Feb", "Mar"];
+        // const q2 = ["Apr", "May", "Jun"];
+        // const q3 = ["Jul", "Aug", "Sep"];
+        // const q4 = ["Oct", "Nov", "Dec"];
+
+        // const year = [...q1, ...q2, ...q3, ...q4];
+        // console.log(year);
+
+        const fruits = [
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ];
+        const valueExpec = fruits.map((data) => {
+            if (data > 300) {
+                console.log(data);
+            }
+        })
+
+        const res = {
+            status: 200,
+            data: ["data"],
+            message: "successfully return a data"
+        }
+
+        const myPromise = new Promise(function (myResolve, myReject) {
+            setTimeout(function () { myResolve("Hello Saylani"); }, 3000);
+        });
+        console.log()
+        myPromise.then(function (value) {
+            document.getElementById("demo").innerHTML = value;
+        });
+
+        var resultantArr = [
+            { user: "Saylani" },
+            {},
+
+        ]
+    </script>
+</body>
+
+</html>
