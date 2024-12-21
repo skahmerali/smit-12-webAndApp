@@ -1,7 +1,12 @@
-Node download
-npm i create-react-app -g
-npx create-react-app my-app(koi bhi name)
-open terminal in cmd 
+Node download (LTS version)
+npm i -g create-react-app ----->in the command prompt (inside the winodws bar/start bar)
+npx create-react-app syalani-app ---->(koi bhi name se app bana sakty hain with in ur working diractory)
+open terminal with cmd 
 npm i
 npm start
 
+
+Sometime you have to face some errors regarding reportWebVitals so you only need to remove webVitals line from index.js (
+    import reportWebVitals from './reportWebVitals';
+    reportWebVitals();
+)

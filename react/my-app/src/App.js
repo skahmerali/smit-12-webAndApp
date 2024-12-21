@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   console.log("hello world");
   return (
+    // Here you can write your jsx
     <div className="App">
       Hello World 
       SMIT
