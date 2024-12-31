@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import Room from './components/Room';
+import Counter from './components/counter';
 
 function App() {
   return (
     <div className="App">
-      <Room />
+      {/* <Room /> */}
+      <Counter />
       Hello world
     </div>
   );
