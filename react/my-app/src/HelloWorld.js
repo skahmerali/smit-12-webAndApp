@@ -1,8 +1,8 @@
 import Reat from 'react';
 
 
-export default function HelloWold (){
-    return(
+export default function HelloWrold() {
+    return (
         <div>Hello World</div>
     )
 }
