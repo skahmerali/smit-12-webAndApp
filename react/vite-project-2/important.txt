@@ -1,0 +1,4 @@
+Vite support 
+    import.meta.env.PORTNAME
+CRA support :
+    process.env.PORTNAME

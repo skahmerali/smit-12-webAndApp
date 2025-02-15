@@ -1,3 +1,4 @@
+"use strict";
 // let userName:any = "John";
 // userName = 25;
 // let userName:unknown = "John";
@@ -8,7 +9,7 @@
 // }else {
 //     console.log("userName is a number");
 // }
-var userValue = 'ahmer';
+let userValue = 'ahmer';
 if (typeof userValue === "string") {
     console.log("userName is a string");
 }
