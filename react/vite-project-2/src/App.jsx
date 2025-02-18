@@ -2,24 +2,25 @@ import { useState, useRef, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Signup from './Signup'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  const ref = useRef(null);
+  // const [count, setCount] = useState(0)
+  // const ref = useRef(null);
 
-  useEffect(() => {
-    let userValue = ref.current.style.background = 'green';
-    // var x = ref.current + 1;
-    console.log(userValue);
-    // fetch('https://jsonplaceholder.typicode.com/todos/')
-    //   .then(response => response.json())
-    //   .then(json => console.log(json))
-  })
+  // useEffect(() => {
+  //   let userValue = ref.current.style.background = 'green';
+  //   // var x = ref.current + 1;
+  //   console.log(userValue);
+  //   // fetch('https://jsonplaceholder.typicode.com/todos/')
+  //   //   .then(response => response.json())
+  //   //   .then(json => console.log(json))
+  // })
 
   return (
     <>
-      <div>
+      {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -44,7 +45,9 @@ function App() {
         type="text"
         ref={ref}
         value={count}
-      />
+      /> */}
+
+      <Signup />
     </>
   )
 }
