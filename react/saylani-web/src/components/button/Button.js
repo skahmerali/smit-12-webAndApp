@@ -1,21 +1,26 @@
-// import React from 'react'
+import React from 'react';
+import Button from '@mui/material/Button';
 
-// export default function Button(props) {
-//     console.log(props.obj.awesome)
+export default function ButtonUses({ children }) {
+
+    function handleAlert() {
+        alert('Hello SMIT students');
+    }
+    // console.log(props.obj.awesome)
 
 
 
 
 
-//     if (user) {
-//         return (<div>Hello user</div>)
-//     } else if (serviceManger) {
-//         return (<div>Hello service manager</div>)
-//     }
-//     return (
-//         <button src={props.src}>
-//             {props.name}
-//         </button>
+    // if (user) {
+    //     return (<div>Hello user</div>)
+    // } else if (serviceManger) {
+    //     return (<div>Hello service manager</div>)
+    // }
+    return (
+        <Button variant="outlined" onClick={handleAlert}>
+            {children}
+        </Button>
 
-//     )
-// }
+    )
+}

@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
-
+import React, { useState } from 'react';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 // import Button from '../button/Button';
 
 export default function Home() {
@@ -12,25 +14,30 @@ export default function Home() {
         // var userValue = document.getElementById('userVale').value;
     }
     return (
-        <div>
-            hello {data}
-            {/* hello {userValue} */}
-            <br />
-            <input
-                // id='userVale'
-                // value=''
-                onChange={userChangeValue}
-            />
-            <button onClick={userChangeValue}>
-                click please
-            </button>
-            {/* Hello saylani
-            <Button
-                src="Ali"
-                name="click me"
-                obj={{ awesome: "yes", disabled: "no" }}
-            /> */}
+        <Box>
+            {/* <Grid container>
+                <Grid item> */}
 
-        </div>
+                    hello {data}
+                {/* </Grid> */}
+                {/* hello {userValue} */}
+
+                <input
+                    // id='userVale'
+                    // value=''
+                    onChange={userChangeValue}
+                />
+                <button onClick={userChangeValue}>
+                    click please
+                </button>
+                {/* Hello saylani
+            <Button
+            src="Ali"
+            name="click me"
+            obj={{ awesome: "yes", disabled: "no" }}
+            /> */}
+            {/* </Grid> */}
+        </Box>
+
     )
 }
