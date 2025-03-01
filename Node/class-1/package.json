@@ -1,0 +1,17 @@
+{
+  "name": "class-1",
+  "version": "1.0.0",
+  "description": "Introduction to Node and server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Sk ahmer ali",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "nodemon": "^3.1.9"
+  }
+}
