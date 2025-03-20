@@ -1,12 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const bccrypt = require("bcryptjs");
+require('dotenv').config();
 const app = express();
-
+const salt = bcrypt.genSaltSync(10);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-const URI = "mongodb+srv://Ahmer:Ahmer@cluster0.lnsqyol.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const URI = process.env.URI;
 
 mongoose.connect(URI, { autoIndex: false });
 const signupShcema = mongoose.Schema({
@@ -17,31 +19,62 @@ const signupShcema = mongoose.Schema({
     rollNumber: Number,
 });
 const signupModal = mongoose.model('Batch12Signup', signupShcema);
+const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 app.post("/signup", async (req, res) => {
     try {
         const { name, email, password, U_id, rollNumber } = req.body;
 
-        // if (email.include('@') && password.length > 5 ){
-            
-        // }
+        if (regex.test(email) && password.length > 5) {
+            const hashPassword = bcrypt.hashSync(password, salt);
+            // hashPassword = lasknskandsjan39838n&^&^&snsa
             let users = new signupModal({
                 name,
                 email,
-                password: password,
+                password: hashPassword,
                 U_id,
                 rollNumber
             })
-        await users.save();
-        res.send({
-            status: 200,
-            data: users,
-            message: "signup sucessfully..."
-        })
+            await users.save();
+            res.send({
+                status: 200,
+                data: users,
+                message: "signup sucessfully..."
+            })
+        }
     }
     catch (err) {
         console.log(err)
     }
 })
+
+app.post("/login", async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const user = await signupModal.findOne(email);
+        if (!user) {
+            return res.status(500).json({ message: "User is not valid" })
+        }
+        const pass = await bcrypt.compareSync(password, user.password);
+        if (pass) {
+            bcrypt.genSalt(10, (err, salt) => {
+                bcrypt.hash(password, salt, function (err, hash) {
+                    // Store hash in your password DB
+                });
+            });
+
+            res.send({
+                status: 200,
+                data: user,
+                message: "signup sucessfully..."
+            })
+
+        }
+    }
+    catch (err) {
+        console.log(err)
+    }
+})
+
 app.get('/user', (req, res) => {
     res.send("hello world")
     // {email = "", password: ""}
