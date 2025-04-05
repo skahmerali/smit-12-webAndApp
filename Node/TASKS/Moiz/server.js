@@ -1,11 +1,16 @@
-const express = require('express')
-const myRouter = require('./routes/router')
-const dbConnection = require('./DB/db')
-const app = express()
-app.use(express.json())
+// npm init
+// question and answers
+// npm i express mongoose dotenv
+
+const express = require('express');
+const myRouter = require('./routes/router');
+const dbConnection = require('./DB/db');
+const app = express();
+app.use(express.json());
 
 // DB Connect Function
-dbConnection()
+
+dbConnection();
 
 app.use(myRouter)
 
