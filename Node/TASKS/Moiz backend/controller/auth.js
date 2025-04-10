@@ -1,4 +1,6 @@
-const signUpCon = (req, res) => {
+const userSchema = require('../models/userSchema')
+
+const signUpCon = async (req, res) => {
 
 
   let { name, email, password, age } = req.body
@@ -30,7 +32,25 @@ const signUpCon = (req, res) => {
     res.status(401).json({ serverMsg: "Invalid Email" })
   }
 
-  res.status(201).json({ serverMsg: "Created Sucessfully" })
+ try {
+
+  let userData = await userSchema.create({
+    name,email,password,age
+  })
+
+  console.log(userData);
+
+  res.status(201).json({ serverMsg: "Created Sucessfully", data : userData })
+
+ } catch(err) {
+  console.log(err);
+
+  res.status(400).json({ serverMsg: err})
+  
+ }
+  
+
+ 
 }
 
 module.exports = signUpCon

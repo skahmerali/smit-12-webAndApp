@@ -3,8 +3,10 @@ const mongoose = require('mongoose')
 
 const dbConnection = async () => {
     try {
-        console.log(process.env.URI);
-        await mongoose.connect(process.env.URI, { autoIndex: 'false' })
+    
+        await mongoose.connect(process.env.URI, { autoIndex: 'false' });
+        console.log('db connected');
+        
     }
     catch (error) {
         console.log('DB Not Connected');
