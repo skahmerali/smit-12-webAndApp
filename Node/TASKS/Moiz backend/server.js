@@ -15,6 +15,4 @@ app.use(cors());
 dbConnection();
 
 app.use(myRouter);
-
-
 app.listen(3000, () => console.log('server is runiing on 3000'))
