@@ -1,7 +1,7 @@
-const userSchema = require('../models/userSchema')
-
+const userModal = require('../models/userSchema')
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 const signUpCon = async (req, res) => {
-
 
   let { name, email, password, age } = req.body
 
@@ -32,25 +32,75 @@ const signUpCon = async (req, res) => {
     res.status(401).json({ serverMsg: "Invalid Email" })
   }
 
- try {
+  try {
 
-  let userData = await userSchema.create({
-    name,email,password,age
-  })
+    const hashPass = bcrypt.genSalt(saltRounds, function (err, salt) {
+      bcrypt.hash(password, salt, function (err, hash) {
+        if (!err) {
+          // let hashPass = hash;
+          return hash;
+        }
+        // Store hash in your password DB.
+      });
+    });
+    let userData = await userModal.create({
+      name, email, password: hashPass, age
+    })
 
-  console.log(userData);
+    console.log(userData);
 
-  res.status(201).json({ serverMsg: "Created Sucessfully", data : userData })
+    res.status(201).json({ serverMsg: "Created Sucessfully", data: userData })
 
- } catch(err) {
-  console.log(err);
+  } catch (err) {
+    console.log(err);
 
-  res.status(400).json({ serverMsg: err})
-  
- }
-  
+    res.status(400).json({ serverMsg: err })
 
- 
+  }
+
+
+
+}
+const loginCon = async (req, res) => {
+
+  let { email, password } = req.body
+
+  // sheikhahmer@gmail.com
+  // sheikhahmer1@gmail.com
+  // sheikhahmer2@gmail.com ===> email
+  // sheikhahmer3@gmail.com
+  // sheikhahmer4@gmail.com
+  if (!email || !password) {
+    return (res.send({
+      status: 404,
+      message: 'data is invalid'
+    }))
+  }
+
+  try {
+    const user = await userModal.findOne({ email });
+    // return user = { email : "", password : "", age: "", gender:" "} whatever it is considing it will be return
+
+    // Load hash from your password DB.
+    bcrypt.compare(password, user.password, function (err, result) {
+      // result == true
+      if (result) {
+        res.send({
+          status: 200,
+          message: "login sucessfully",
+          user,
+        })
+      }
+    });
+
+
+  } catch (err) {
+    console.log(err);
+
+    res.status(400).json({ serverMsg: err })
+
+  }
+
 }
 
 module.exports = signUpCon
