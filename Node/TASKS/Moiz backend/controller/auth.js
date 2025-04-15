@@ -1,6 +1,8 @@
 const userModal = require('../models/userSchema')
 const bcrypt = require('bcrypt');
+const jwt = require("jsonwebtoken");
 const saltRounds = 10;
+
 const signUpCon = async (req, res) => {
 
   let { name, email, password, age } = req.body
@@ -78,19 +80,23 @@ const loginCon = async (req, res) => {
   }
 
   try {
-    const user = await userModal.findOne({ email });
+    // const user = await userModal.findOne({ email });
     // return user = { email : "", password : "", age: "", gender:" "} whatever it is considing it will be return
 
     // Load hash from your password DB.
-    bcrypt.compare(password, user.password, function (err, result) {
+    // bcrypt.compare(password, user.password, function (err, result) {
+    jwt.sign({ name: "ahmer", email: "ahmer@gmail.com", role: "admin" }, process.env.PRIVATEKEY, function (err, token) {
+      console.log(token);
+      // });
       // result == true
-      if (result) {
-        res.send({
-          status: 200,
-          message: "login sucessfully",
-          user,
-        })
-      }
+      // if (result) {
+      res.send({
+        status: 200,
+        message: "login sucessfully",
+        // user,
+        token
+      })
+      // }
     });
 
 
@@ -103,4 +109,4 @@ const loginCon = async (req, res) => {
 
 }
 
-module.exports = signUpCon
+module.exports = { signUpCon, loginCon }
