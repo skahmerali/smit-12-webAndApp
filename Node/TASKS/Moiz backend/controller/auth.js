@@ -110,3 +110,7 @@ const loginCon = async (req, res) => {
 }
 
 module.exports = { signUpCon, loginCon }
+
+// https://frontegg.com/guides/jwt-authorization
+// https://sathira-hguruge.medium.com/using-jwt-and-custom-authentication-middleware-for-authorization-and-authentication-in-node-js-445064d141e5
+// https://medium.com/@hamzamakh/authentication-and-authorization-using-jwt-with-node-js-39a0dfb6cbc6
