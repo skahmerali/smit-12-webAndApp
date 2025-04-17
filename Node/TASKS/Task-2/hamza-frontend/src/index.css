@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.box {
+  width: 300px;
+  padding: 20px;
+  background-color: rgba(231, 228, 228, 0.56);
+}
+
+.box h3{
+  width: fit-content;
+  margin: 20px  auto;
+}
+
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.submit{
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit:hover{
+  background-color: black;
+  color: white ;
+}
