@@ -10,6 +10,7 @@ import Saylani from './Saylani.js';
 import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import UserName from './components/UserName.jsx';
+import DataProvider from './Context/DataContext.js';
 
 function App() {
   const [userGettingName, setUserGettingName] = useState('');
@@ -29,7 +30,7 @@ function App() {
       element: <> <Navbar /> <Home /> </>
     },
     {
-      path: `/home/:userName`,
+      path: `/home/userName`,
       element: <> <Navbar /> <UserName /> </>
     },
 
@@ -37,17 +38,18 @@ function App() {
 
 
   return (
-    <RouterProvider router={router}>
-      <>
-        <div>
-          Hello Saylani
-        </div>
-        <input onChange={(e) => setUserGettingName(e.target.value)} />
-        <button onClick={() => { setVisible(true) }}>clickme</button>
-        <UserName userGettingName={userGettingName} visible={visible} />
-
-      </>
-    </RouterProvider>
+    <DataProvider>
+      <RouterProvider router={router}>
+        <>
+          <div>
+            Hello Saylani
+          </div>
+          <input onChange={(e) => setUserGettingName(e.target.value)} />
+          <button onClick={() => { setVisible(true) }}>clickme</button>
+          <UserName userGettingName={userGettingName} visible={visible} />
+        </>
+      </RouterProvider>
+    </DataProvider>
   );
 }
 
