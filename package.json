@@ -1,9 +1,35 @@
 {
   "devDependencies": {
+    "nodemon": "^3.1.10",
     "typescript": "^5.7.3"
   },
   "dependencies": {
     "axios": "^1.7.9",
-    "bcrypt": "^5.1.1"
-  }
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.1",
+    "multer": "^1.4.5-lts.2"
+  },
+  "name": "smit-12-webandapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skahmerali/smit-12-webAndApp.git"
+  },
+  "author": "sk ahmer ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skahmerali/smit-12-webAndApp/issues"
+  },
+  "homepage": "https://github.com/skahmerali/smit-12-webAndApp#readme",
+  "description": ""
 }
