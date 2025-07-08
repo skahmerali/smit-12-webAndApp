@@ -2,18 +2,19 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 
-const applicationRoutes = require("./routes/applicationRoutes")
+const applicationRoutes =  require("./routes/applicationRoutes")
 
-// const connectDB = require('./config/db');
+const connectDB = require('./config/db');
 const cors = require('cors');
 
 app.use(express.json());
 //Yeh aap ke server ko web forms ka data asani se handle karne deta hai.
 app.use(express.urlencoded({ extended: true }));  
+// Cross Origin
 app.use(cors()); 
 
 // to connect mongo db
-// connectDB();
+connectDB();
 
 
 app.use("/api/v1/applictions" , applicationRoutes)

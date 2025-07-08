@@ -1,12 +1,26 @@
 let mongoose = require('mongoose');
 
 const fromSchema = new mongoose.Schema({
-    name: String,
+    firstName: String,
+    lastName: String,
     email: String,
-    phone: String,
+    address: String, 
+    // educationDetails: {
+    //     school: String,
+
+    // }, 
+    school: String,
+    degree: String,
+    passoutYear: Number,
+
+    // lastEmployeeDetails: String
+    companyName: String,
+    employeeDate: String,
+    position: String
+
 });
+    
 
 
-
-const forms = mongoose.model('serviceprovider', fromSchema);
+const forms = mongoose.model('EmployeeForms', fromSchema);
 module.exports = forms;
