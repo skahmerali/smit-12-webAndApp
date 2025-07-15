@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const {applyForm, getUserForms, formUpdate} = require("../controllers/applicationController")
-const  {upload} = require('../middleware/multer')
+const {applyForm, getUserForms, formUpdate, deleteFormData} = require("../controllers/applicationController")
+const  {upload} = require('../middleware/multer');
+const { createUser } = require("../controllers/authContrller");
 
 
 router.post("/apply" , applyForm);
@@ -15,5 +16,6 @@ router.get('/getUserDetails', getUserForms)
 
 router.put('/formUpdate/:id', formUpdate)
 
-
+router.delete('/deleteFormData/:id', deleteFormData)
+router.post('/userData', createUser)
 module.exports = router;

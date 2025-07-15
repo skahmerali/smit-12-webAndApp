@@ -83,9 +83,22 @@ module.exports.formUpdate = async(req, res) => {
 
         let data = await EmployeeForms.findByIdAndUpdate(id, { $set: applicationFormData})
 
-        console.log("data ==>", data);
+        console.log("data ==>", applicationFormData);
         
 
+        res.status(200).json({message : 'sucess', data})
+    } catch (error) {
+        res.status(500).json({message : 'server Error'})
+        
+    }
+}
+module.exports.deleteFormData = async(req, res) => {
+    try {
+    let {id} = req.params;
+        let data = await EmployeeForms.deleteOne({_id:id})
+
+        // console.log("data ==>", applicationFormData);
+        
         res.status(200).json({message : 'sucess', data})
     } catch (error) {
         res.status(500).json({message : 'server Error'})
