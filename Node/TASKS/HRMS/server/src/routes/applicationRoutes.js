@@ -19,8 +19,5 @@ router.put('/formUpdate/:id', formUpdate)
 
 router.delete('/deleteFormData/:id', deleteFormData)
 router.post('/userData', createUser);
-
-
-router.post("/inviteUser", inviteUser)
-
+router.post("/inviteUser", inviteUser);
 module.exports = router;

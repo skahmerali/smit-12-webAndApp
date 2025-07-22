@@ -2,6 +2,7 @@ const authSchema = require('./../models/auth/authSchema')
 const nodemailer = require("nodemailer");
 const Invite = require("./../models/invite/invite");
 const transporter = require("./../config/nodemailer");
+const { default: bcrypt } = require('bcryptjs');
 
 module.exports.createUser = async (req, res) => {
     try {
@@ -49,7 +50,7 @@ module.exports.createUser = async (req, res) => {
 }
 module.exports.inviteUser = async (req, res) => {
     try {
-         const { firstName, lastName, email, address, educationDetails, lastEmployeeDetails } = req.body;
+        const { firstName, lastName, email, address, educationDetails, lastEmployeeDetails } = req.body;
         const {
             school,
             degree,
@@ -61,6 +62,7 @@ module.exports.inviteUser = async (req, res) => {
             employeeDate,
             position
         } = lastEmployeeDetails;
+        
         const getRandom = new Date().getTime();
         if (!firstName || !lastName || !email || !address || !educationDetails || !school || !degree || !passoutYear || !lastEmployeeDetails || !companyName || !employeeDate || !position || !getRandom) {
             // res.status(404).json
@@ -80,7 +82,7 @@ module.exports.inviteUser = async (req, res) => {
         }
         const createUserData = new authSchema(userData)
         const result = await createUserData.save();
-         const newInvite = await Invite.create({
+        const newInvite = await Invite.create({
             email,
             reg_code: getRandom
         });
@@ -109,3 +111,39 @@ module.exports.inviteUser = async (req, res) => {
         console.log(e, "error");
     }
 }
+
+
+module.exports.completeRegistration = async (req, res) => {
+    try {
+        const {
+            password
+        } = req.body;
+
+        const {
+            reg_code
+        }
+            = req.params
+        const hashedpassword = await bcrypt.genSalt(password, 10)
+
+        const findUser = await authSchema.find({
+            getRandom: reg_code
+        })
+        await authSchema.findByIdAndUpdate(findUser._id, {
+            password: hashedpassword
+        })
+        res.send({
+            message: 'password update succesfully ',
+            status: 200,
+        });
+
+
+
+    } catch (error) {
+        console.log(error.message)
+        res.send({
+            message: 'error sending Mail',
+            status: 500,
+        });
+    }
+}
+

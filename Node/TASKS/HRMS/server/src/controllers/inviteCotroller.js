@@ -48,27 +48,3 @@ module.exports.sendInvite = async (req, res) => {
     }
 }
 
-module.exports.completeRegistration = async (req, res) => {
-    try {
-        const {
-            password
-        } = req.body;
-
-
-
-        console.log("Message sent:", info);
-
-        res.send({
-            message: 'invite Send Successfully',
-            status: 200,
-        });
-
-
-    } catch (error) {
-        console.log(error.message)
-        res.send({
-            message: 'error sending Mail',
-            status: 500,
-        });
-    }
-}
